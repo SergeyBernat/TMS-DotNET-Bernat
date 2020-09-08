@@ -1,12 +1,21 @@
 ﻿using System;
-
-namespace Homework2
+enum Days
 {
-    class Program
+    Monday = 1,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+class MainClass
+{
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        Console.WriteLine("Enter number day of week:");
+        int userInput = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine((Days)userInput);
+
     }
 }
