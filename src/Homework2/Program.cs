@@ -20,10 +20,7 @@ class MainClass
             Console.WriteLine("Enter number day of week:");
             int userInput = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine((Days)userInput);
-
-
         }
         while ((repeat == 'y') || (repeat == 'Y'));
-
     }
 }
