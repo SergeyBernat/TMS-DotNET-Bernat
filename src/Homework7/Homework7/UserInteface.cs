@@ -7,7 +7,7 @@ namespace Homework7
 {
     class UserInteface
     {
-        public static void menu(Person user, List<Running> runningList, List<Walking> walkingList, Action<ConsoleColor, string> action)
+        public static void Menu(Person user, List<Running> runningList, List<Walking> walkingList, Action<ConsoleColor, string> action)
         {
             string lS = "|                              |"; // lineSymbol
             string eS = "                               "; // emptySymbol

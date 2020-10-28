@@ -41,7 +41,7 @@ namespace Homework7
             {
                 throw new ArgumentException("Height or weight is impossible");
             }
-            UserInteface.menu(user, runningList, walkingList, action);
+            UserInteface.Menu(user, runningList, walkingList, action);
         }
         public static void SetTextColor(ConsoleColor color, string text)
         {
