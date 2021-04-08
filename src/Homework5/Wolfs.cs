@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Homework5
 {
@@ -12,6 +10,7 @@ namespace Homework5
             int value = rndAge.Next(1, 8);
             return value;
         }
+
         public void GetInfoW()
         {
             Console.WriteLine("Wolf");

@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Xml.Schema;
 
 namespace Homework7
 {
-    class UserInteface
+    internal class UserInteface
     {
         public static void Menu(Person user, List<Running> runningList, List<Walking> walkingList, Action<ConsoleColor, string> action)
         {
@@ -32,12 +30,12 @@ namespace Homework7
                             Calories = RunInfo.calories,
                             Distance = RunInfo.distance,
                             dateTrainig = RunInfo.startTime
-                            
                         };
                         runningList.Add(run);
                         action(ConsoleColor.Red, "Cool RUN!");
                         Console.WriteLine($"\n{eS}        What's next?");
                         break;
+
                     case ConsoleKey.W:
                         var WalkInfo = Walking.Walk((int)user.Weight);
                         Walking walk = new Walking()
@@ -46,17 +44,18 @@ namespace Homework7
                             Calories = WalkInfo.calories,
                             Distance = WalkInfo.distance,
                             dateTrainig = WalkInfo.startTime
-                            
                         };
                         walkingList.Add(walk);
                         action(ConsoleColor.Green, "have a good walk?:)");
                         Console.WriteLine($"\n{eS}        What's next?");
                         break;
+
                     case ConsoleKey.P:
                         Console.WriteLine($"/Your progress in {DateTime.Now.DayOfWeek.ToString().ToLower()} {user.Name}:\n");
                         Person.GetFullInfo(runningList, walkingList);
                         Console.WriteLine($"\n{eS}        What's next?");
                         break;
+
                     case ConsoleKey.Escape:
                         Console.WriteLine($"qHave a nice day {user.Name}!");
                         Environment.Exit(0);

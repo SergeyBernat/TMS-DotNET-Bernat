@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Data.SqlTypes;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Homework6
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("============================ATM============================");
             Console.WriteLine("Select operation:" + "\nPress W. Withdraw money" + "\nPress D. Deposit money" + "\nPress I. Check your card balance" + "\nPress ESC. Exit");
@@ -38,20 +36,22 @@ namespace Homework6
                             Console.WriteLine("Sorry, but there is not enough cash in the ATM");
                         }
                         break;
+
                     case ConsoleKey.D:
                         card.Deposit(userInputSum);
                         atm.atmPut(userInputSum);
                         break;
+
                     case ConsoleKey.I:
                         card.BalanceInfo();
                         break;
+
                     case ConsoleKey.Escape:
                         Environment.Exit(0);
                         break;
                 }
                 static void GetInfo(decimal _cardBalance) => Console.WriteLine($"|Your balance|: {_cardBalance}");
             }
-
         }
     }
 }

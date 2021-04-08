@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Homework6
+﻿namespace Homework6
 {
     public class ATM
     {
@@ -12,6 +8,7 @@ namespace Homework6
         {
             atmCashBalance -= userInputSum;
         }
+
         public void atmPut(decimal userInputSum)
         {
             atmCashBalance += userInputSum;

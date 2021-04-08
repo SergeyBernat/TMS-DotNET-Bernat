@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.Cache;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Homework5
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Hello averyone to my ZOO!");
             Console.WriteLine();
@@ -31,9 +29,11 @@ namespace Homework5
                     case "wolf":
                         GetWolf(animalWolfs);
                         break;
+
                     case "hawk":
                         GetHawk(animalHawks);
                         break;
+
                     case "end":
                         int valueAnimal = GetCoundOfList(animalHawks, animalWolfs);
                         Console.WriteLine($"You buy {valueAnimal} animal/s");
@@ -49,6 +49,7 @@ namespace Homework5
                             hawk.GetInfoH();
                         }
                         break;
+
                     case "exit":
                         Console.WriteLine("Thanks for your help bro!");
                         Environment.Exit(-1);

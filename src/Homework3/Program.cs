@@ -2,9 +2,9 @@
 
 namespace Homework3
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             (int month, DayOfWeek dayOfWeek) = UserInputData();
             GetDatesByDayOfWeek(month, DateTime.Now.Year, dayOfWeek);
@@ -35,36 +35,42 @@ namespace Homework3
                             canParse = true;
                         }
                         break;
+
                     case "tuesday":
                         {
                             dayOfWeek = DayOfWeek.Tuesday;
                             canParse = true;
                         }
                         break;
+
                     case "wednesday":
                         {
                             dayOfWeek = DayOfWeek.Wednesday;
                             canParse = true;
                         }
                         break;
+
                     case "thursday":
                         {
                             dayOfWeek = DayOfWeek.Thursday;
                             canParse = true;
                         }
                         break;
+
                     case "friday":
                         {
                             dayOfWeek = DayOfWeek.Friday;
                             canParse = true;
                         }
                         break;
+
                     case "saturday":
                         {
                             dayOfWeek = DayOfWeek.Saturday;
                             canParse = true;
                         }
                         break;
+
                     case "sunday":
                         {
                             dayOfWeek = DayOfWeek.Sunday;
@@ -72,7 +78,6 @@ namespace Homework3
                         }
                         break;
                 }
-
             } while (canParse == false);
 
             return dayOfWeek;

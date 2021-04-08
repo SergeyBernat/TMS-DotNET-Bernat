@@ -1,6 +1,6 @@
 ﻿using System;
 
-enum Days
+internal enum Days
 {
     Monday = 1,
     Tuesday,
@@ -10,17 +10,23 @@ enum Days
     Saturday,
     Sunday
 }
-class MainClass
+
+internal class MainClass
 {
     public static void Main(string[] args)
     {
-        char repeat = 'y';
-        do
+        while (true)
         {
             Console.WriteLine("Enter number day of week:");
-            int userInput = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine((Days)userInput);
+
+            string userInput = Console.ReadLine();
+            if (userInput.ToUpper() == "Y")
+            {
+                break;
+            }
+
+            int parsedUserInput = Convert.ToInt32(userInput);
+            Console.WriteLine((Days)parsedUserInput);
         }
-        while ((repeat == 'y') || (repeat == 'Y'));
     }
 }

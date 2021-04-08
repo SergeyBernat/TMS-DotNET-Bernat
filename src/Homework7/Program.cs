@@ -1,19 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq.Expressions;
-using System.Reflection.Metadata;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.CompilerServices;
-using System.Runtime.Intrinsics.X86;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Homework7
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Action<ConsoleColor, string> action;
             action = SetTextColor;
@@ -21,6 +13,7 @@ namespace Homework7
             var walkingList = new List<Walking>();
             GetInfoByUserAndRunMenu(runningList, walkingList, action);
         }
+
         private static void GetInfoByUserAndRunMenu(List<Running> runningList, List<Walking> walkingList, Action<ConsoleColor, string> action)
         {
             var user = new Person { };
@@ -43,12 +36,14 @@ namespace Homework7
             }
             UserInteface.Menu(user, runningList, walkingList, action);
         }
+
         public static void SetTextColor(ConsoleColor color, string text)
         {
             Console.ForegroundColor = color;
             Console.WriteLine($"{text}");
             Console.ResetColor();
         }
+
         public static void GetKeyByUser()
         {
             Console.WriteLine("/Press Enter after trening");
@@ -58,8 +53,5 @@ namespace Homework7
                 userInputKey = Console.ReadKey().Key;
             }
         }
-
-
     }
 }
-

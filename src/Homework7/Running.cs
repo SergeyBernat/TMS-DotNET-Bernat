@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection.Metadata;
-using System.Text;
 
 namespace Homework7
 {
-    class Running
+    internal class Running
     {
-        const double runningSpeed = 3.3;
+        private const double runningSpeed = 3.3;
         public DateTime dateTrainig { get; set; }
         public double RunTime { get; set; }
         public double Calories { get; set; }

@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Homework7
 {
-    class Walking
+    internal class Walking
     {
-        const double walkingSpeed = 1.39;
+        private const double walkingSpeed = 1.39;
         public DateTime dateTrainig { get; set; }
         public double WalkTime { get; set; }
         public double Calories { get; set; }

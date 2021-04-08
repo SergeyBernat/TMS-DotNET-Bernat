@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection.Metadata;
-using System.Text;
 
 namespace Homework7
 {
-    class Person
+    internal class Person
     {
         public string Name { get; set; }
         public double Weight { get; set; }
